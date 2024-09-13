@@ -1,0 +1,13 @@
+<div>
+    <h2>{{ isEdit ? 'Edit Task' : 'Add Task' }}</h2>
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+      <label for="title">Title</label>
+      <input id="title" formControlName="title">
+      
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description"></textarea>
+      
+      <button type="submit">{{ isEdit ? 'Update' : 'Add' }}</button>
+    </form>
+  </div>
+  
